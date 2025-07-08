@@ -1,4 +1,5 @@
 import {
+  ChangeDetectionStrategy,
   Component,
   ElementRef,
   Input,
@@ -12,6 +13,7 @@ import { IUser } from '../../models/user.model';
   selector: 'app-author-details',
   imports: [],
   templateUrl: './author-details.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AuthorDetailsComponent {
   @ViewChild('authorSection') authorSection?: ElementRef<HTMLElement>;
