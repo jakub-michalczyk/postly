@@ -1,6 +1,6 @@
 <img src="https://github.com/jakub-michalczyk/postly/blob/master/public/images/logo.svg" width="200"/>
 
-**POSTLY** is an pplication that fetches a list of posts from a public API and displays author details upon selecting a post. User data is cached in localStorage to reduce redundant HTTP requests.
+**POSTLY** is an application that fetches a list of posts from a public API and displays author details upon selecting a post. User data is cached in localStorage to reduce redundant HTTP requests.
 
 ## Features
 
