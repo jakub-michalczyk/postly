@@ -9,7 +9,7 @@ export class PostService {
 
   loadPosts(): void {
     this.http
-      .get<IPost[]>('https://jsonplaceholder.typicode.com/posts')
+      .get<IPost[]>('/posts')
       .subscribe((posts) => this.posts.set(posts));
   }
 }
