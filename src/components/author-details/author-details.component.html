@@ -1,0 +1,63 @@
+@if(user(); as user){
+<section class="mt-10 w-full px-6" #authorSection>
+  <div
+    class="p-6 border-2 border-white text-white w-full md:max-w-xl md:mx-auto"
+  >
+    <h2 class="text-2xl font-bold mb-2">Author Details</h2>
+    <!-- PERSONAL -->
+    <div class="my-4">
+      <p>
+        Name: <span class="text-neutral-400">{{ user.name }}</span>
+      </p>
+      <p>
+        Username: <span class="text-neutral-400">{{ user.username }}</span>
+      </p>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="my-4">
+      <p>
+        Email:
+        <a [href]="'mailto:' + user.email" class="underline text-neutral-400">{{
+          user.email
+        }}</a>
+      </p>
+      <p>
+        Phone:
+        <a [href]="'tel:' + user.phone" class="underline text-neutral-400">{{
+          user.phone
+        }}</a>
+      </p>
+      <p>
+        Website:
+        <a
+          [href]="'https://' + user.website"
+          target="_blank"
+          class="underline text-neutral-400"
+          >{{ user.website }}</a
+        >
+      </p>
+    </div>
+
+    <!-- ADDRESS -->
+    <div class="my-4">
+      Address:
+      <p class="ml-4 text-neutral-400">
+        {{ user.address.street }}, {{ user.address.suite }}<br />
+        {{ user.address.city }}, {{ user.address.zipcode }}
+      </p>
+    </div>
+
+    <!-- COMPANY -->
+    <div class="my-4">
+      Company:
+      <p class="ml-4 text-neutral-400">
+        {{ user.company.name }}<br />
+        <em>{{ user.company.catchPhrase }}</em
+        ><br />
+        <small>{{ user.company.bs }}</small>
+      </p>
+    </div>
+  </div>
+</section>
+}

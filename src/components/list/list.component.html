@@ -1,0 +1,37 @@
+<div class="bg-stone-900">
+  <div class="py-12 px-12">
+    <div class="w-36">
+      <img src="/images/logo.svg" />
+    </div>
+  </div>
+
+  <div class="flex justify-center p-6 md:p-16">
+    <ul>
+      @for( post of posts(); track post.id) {
+      <button
+        (click)="onSelect(post)"
+        class="md:border-0 border-b border-white py-6 block cursor-pointer"
+      >
+        <li
+          class="flex flex-col md:flex-row gap-6 md:gap-4 transition-transform hover:scale-110"
+        >
+          <span
+            class="border border-white rounded-full text-white w-12 h-12 flex justify-center items-center text-2xl"
+            >{{ post.id }}</span
+          >
+          <span class="bg-white py-2 px-4"> {{ post.title }}</span>
+        </li>
+      </button>
+
+      }
+    </ul>
+  </div>
+
+  @if(selectedUser()){
+  <app-author-details [user]="selectedUser"></app-author-details>
+  }
+
+  <div class="py-12 text-gray-300 text-center text-xs">
+    &copy; Jakub Michalczyk
+  </div>
+</div>
