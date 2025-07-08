@@ -31,12 +31,12 @@ npm install -g @angular/cli
 ## Setup
 - **Clone repository:**
 ```bash
-git clone https://github.com/jakub-michalczyk/Billora
+git clone https://github.com/jakub-michalczyk/Postly
 ```
 
 - **Navigate to the project folder:**
 ```bash
-cd billora
+cd postly
 ```
 
 - **Install the dependencies:**
