@@ -1,59 +1,62 @@
-# Postly
+<img src="https://github.com/jakub-michalczyk/postly/blob/master/public/images/logo.svg" width="200"/>
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
+**POSTLY** is an pplication that fetches a list of posts from a public API and displays author details upon selecting a post. User data is cached in localStorage to reduce redundant HTTP requests.
 
-## Development server
+## Features
 
-To start a local development server, run:
+- Fetches a list of posts from the API: https://jsonplaceholder.typicode.com/posts
+- Displays post titles in a list
+- On post click, loads the author's data based on the userId from the API: https://jsonplaceholder.typicode.com/users/{userId}
+- Displays author name, email, and company name
+- Caches user data locally (per session) to avoid repeated network requests
+- Uses Angular Signals for state management
 
+## Technologies Used
+
+- **Angular 19**: For the front-end framework.
+- **Tailwind CSS**: For styling.
+- **RxJS**: For reactive programming and handling asynchronous data flows.
+
+## Prerequisites
+
+Before running the project, make sure you have the following installed:
+
+- **Node.js**: Recommended version 16 or higher.
+- **Angular CLI**: If not installed, you can install it globally using the command:
+
+```bash
+npm install -g @angular/cli
+```
+
+## Setup
+- **Clone repository:**
+```bash
+git clone https://github.com/jakub-michalczyk/Billora
+```
+
+- **Navigate to the project folder:**
+```bash
+cd billora
+```
+
+- **Install the dependencies:**
+```bash
+npm install
+```
+
+- **Run the development server:**
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+The app will be available at [http://localhost:4200](http://localhost:4200).
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
+## Build for Production ##
+To build the project for production, use the following command:
 ```bash
-ng generate component component-name
+ng build --configuration=production
 ```
+The build artifacts will be stored in the dist/ directory.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## License ##
+This project is licensed under the MIT License - see the LICENSE file for details.
